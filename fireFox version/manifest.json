@@ -1,0 +1,21 @@
+{
+    "name": "淘口令转换",
+    "version": "0.0.2",
+    "manifest_version": 2,
+    "description": "将淘口令指向的商品在浏览器中打开",
+    "browser_action": {
+    "default_icon": "icons/32.png",
+    "default_title": "淘口令转换",
+    "default_popup": "popup.html"
+	},
+	"icons":{
+		"12":"icons/12.png",
+		"24":"icons/24.png",
+		"48":"icons/48.png",
+		"128":"icons/128.png"
+	},
+	"permissions": [
+    "activeTab"
+  ]
+	
+}
