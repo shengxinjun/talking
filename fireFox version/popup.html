@@ -3,19 +3,12 @@
  <head>
   <meta http-equiv="Access-Control-Allow-Origin" content="*" />  
   <meta http-equiv="content-type" content="text/html;charset=utf-8" /> 
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.custom.min.css" /> 
-		<link rel="stylesheet" href="assets/css/colorpicker.css" />
- 
-		<link rel="stylesheet" href="assets/css/ace.min.css" />
-		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
-		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
-
-		<script src="assets/js/ace-extra.min.js"></script>
+  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">  
+  <script src="bootstrap-3.3.7-dist/js/jquery.min.js"></script>
+  <script src="bootstrap-3.3.7-dist/js/js/bootstrap.min.js"></script>
   <style>
 
-body {width:380px;}
+body {width:500px;margin:50px 50px;}
 </style> 
  </head> 
  <body> 
@@ -26,17 +19,18 @@ body {width:380px;}
    <div class="widget-body"> 
     <div class="widget-main no-padding"> 
      <form> 
-      <!-- <legend>Form</legend> --> 
-      <fieldset> 
-       <label>淘口令</label> 
-       <input id="talking" type="text" placeholder="请输入淘口令" /> 
-       <p id="tip" class="icon-remove bigger-110 red" style="display:none">淘口令异常</p> 
-      </fieldset> 
-      <div class="form-actions center"> 
+	 
+	 <div class="input-group">
+			<span class="input-group-addon">淘口令</span>
+			<input type="text" class="form-control" id="talking" placeholder="请输入淘口令" />
+	 </div>
+			
+	 <div class="form-actions center"> 
 		<a class="btn btn-sm btn-success" id="lj" style="display:none">链接已生成->点我  </a> 
        <button type="button" class="btn btn-sm btn-success" id="submit"> <i class="icon-arrow-left icon-on-left bigger-110"></i>打开  </button> 
-      </div> 
-     </form> 
+	   <button type="button" class="btn btn-sm btn-danger" id="tip" style="display:none"> <i class="icon-arrow-left icon-on-left bigger-110"></i>淘口令异常</button> 
+     </div> 
+    </form> 
     </div> 
    </div> 
   </div>  

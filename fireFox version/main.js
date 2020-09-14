@@ -7,13 +7,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) => {
-  var creating = browser.windows.create({
-    url: ["https://developer.mozilla.org",
-          "https://addons.mozilla.org"]
-  });
-  creating.then(onCreated, onError);
-});
+
 	
 	$("input").focus(function(){
 		document.getElementById("tip").style.display="none";

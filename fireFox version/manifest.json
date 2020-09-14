@@ -1,6 +1,6 @@
 {
     "name": "淘口令转换",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "manifest_version": 2,
     "description": "将淘口令指向的商品在浏览器中打开",
     "browser_action": {
