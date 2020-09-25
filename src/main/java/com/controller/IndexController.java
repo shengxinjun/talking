@@ -27,7 +27,7 @@ public class IndexController {
 	Result index(HttpServletRequest request,HttpServletResponse response1,String tkl) {
 		response1.setHeader("Access-Control-Allow-Origin","*");
 		Result result = new Result();
-		
+		tkl=formtTKL(tkl);
 		try {
 			CloseableHttpClient client = null;
 			CloseableHttpResponse response = null;
@@ -62,7 +62,7 @@ public class IndexController {
 	Result indexMy(HttpServletRequest request,HttpServletResponse response1,String tkl) {
 		response1.setHeader("Access-Control-Allow-Origin","*");
 		Result result = new Result();
-		
+		tkl=formtTKL(tkl);
 		try {
 			CloseableHttpClient client = null;
 			CloseableHttpResponse response = null;
@@ -91,5 +91,38 @@ public class IndexController {
 			e.printStackTrace();
 		}
 		return result;
+	}
+	
+	String formtTKL(String tkl){
+		String result="";
+		if(tkl.indexOf("$")>0&&tkl.indexOf("$")!=tkl.lastIndexOf("$")){
+			result=tkl.substring(tkl.indexOf("$")+1, tkl.lastIndexOf("$"));
+			return result;
+		}else if(tkl.indexOf("₤")>0&&tkl.indexOf("₤")!=tkl.lastIndexOf("₤")){
+			result=tkl.substring(tkl.indexOf("₤")+1, tkl.lastIndexOf("₤"));
+			return result;
+		}else if(tkl.indexOf("￥")>0&&tkl.indexOf("￥")!=tkl.lastIndexOf("￥")){
+			result=tkl.substring(tkl.indexOf("￥")+1, tkl.lastIndexOf("￥"));
+			return result;
+		}else if(tkl.indexOf("₳")>0&&tkl.indexOf("₳")!=tkl.lastIndexOf("₳")){
+			result=tkl.substring(tkl.indexOf("₳")+1, tkl.lastIndexOf("₳"));
+			return result;
+		}else if(tkl.indexOf("₴")>0&&tkl.indexOf("₴")!=tkl.lastIndexOf("₴")){
+			result=tkl.substring(tkl.indexOf("₴")+1, tkl.lastIndexOf("₴"));
+			return result;
+		}else if(tkl.indexOf("¢")>0&&tkl.indexOf("¢")!=tkl.lastIndexOf("¢")){
+			result=tkl.substring(tkl.indexOf("¢")+1, tkl.lastIndexOf("¢"));
+			return result;
+		}else if(tkl.indexOf("€")>0&&tkl.indexOf("€")!=tkl.lastIndexOf("€")){
+			result=tkl.substring(tkl.indexOf("€")+1, tkl.lastIndexOf("€"));
+			return result;
+		}else if(tkl.indexOf("(")>0&&tkl.indexOf("(")!=tkl.lastIndexOf("(")){
+			result=tkl.substring(tkl.indexOf("(")+1, tkl.lastIndexOf("("));
+			return result;
+		}else if(tkl.indexOf("(")>0&&tkl.indexOf(")")>0){
+			result=tkl.substring(tkl.indexOf("(")+1, tkl.lastIndexOf(")"));
+			return result;
+		}else
+			return tkl;
 	}
 }
