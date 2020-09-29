@@ -16,15 +16,22 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.model.Result;
+import com.util.Result;
 
 
 @Controller
 @RequestMapping("/*")
 public class IndexController {
+	
+	@RequestMapping("/test")
+	@ResponseBody
+	String test(){
+		return "test";
+		
+	}
 	@RequestMapping("/trTalking")
 	@ResponseBody
-	Result index(HttpServletRequest request,HttpServletResponse response1,String tkl) {
+	public Result index(HttpServletRequest request,HttpServletResponse response1,String tkl) {
 		response1.setHeader("Access-Control-Allow-Origin","*");
 		Result result = new Result();
 		tkl=formtTKL(tkl);
