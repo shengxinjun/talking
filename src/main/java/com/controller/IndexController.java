@@ -102,31 +102,31 @@ public class IndexController {
 	
 	String formtTKL(String tkl){
 		String result="";
-		if(tkl.indexOf("$")>0&&tkl.indexOf("$")!=tkl.lastIndexOf("$")){
+		if(tkl.indexOf("$")>=0&&tkl.indexOf("$")!=tkl.lastIndexOf("$")){
 			result=tkl.substring(tkl.indexOf("$")+1, tkl.lastIndexOf("$"));
 			return result;
-		}else if(tkl.indexOf("₤")>0&&tkl.indexOf("₤")!=tkl.lastIndexOf("₤")){
+		}else if(tkl.indexOf("₤")>=0&&tkl.indexOf("₤")!=tkl.lastIndexOf("₤")){
 			result=tkl.substring(tkl.indexOf("₤")+1, tkl.lastIndexOf("₤"));
 			return result;
-		}else if(tkl.indexOf("￥")>0&&tkl.indexOf("￥")!=tkl.lastIndexOf("￥")){
+		}else if(tkl.indexOf("￥")>=0&&tkl.indexOf("￥")!=tkl.lastIndexOf("￥")){
 			result=tkl.substring(tkl.indexOf("￥")+1, tkl.lastIndexOf("￥"));
 			return result;
-		}else if(tkl.indexOf("₳")>0&&tkl.indexOf("₳")!=tkl.lastIndexOf("₳")){
+		}else if(tkl.indexOf("₳")>=0&&tkl.indexOf("₳")!=tkl.lastIndexOf("₳")){
 			result=tkl.substring(tkl.indexOf("₳")+1, tkl.lastIndexOf("₳"));
 			return result;
-		}else if(tkl.indexOf("₴")>0&&tkl.indexOf("₴")!=tkl.lastIndexOf("₴")){
+		}else if(tkl.indexOf("₴")>=0&&tkl.indexOf("₴")!=tkl.lastIndexOf("₴")){
 			result=tkl.substring(tkl.indexOf("₴")+1, tkl.lastIndexOf("₴"));
 			return result;
-		}else if(tkl.indexOf("¢")>0&&tkl.indexOf("¢")!=tkl.lastIndexOf("¢")){
+		}else if(tkl.indexOf("¢")>=0&&tkl.indexOf("¢")!=tkl.lastIndexOf("¢")){
 			result=tkl.substring(tkl.indexOf("¢")+1, tkl.lastIndexOf("¢"));
 			return result;
-		}else if(tkl.indexOf("€")>0&&tkl.indexOf("€")!=tkl.lastIndexOf("€")){
+		}else if(tkl.indexOf("€")>=0&&tkl.indexOf("€")!=tkl.lastIndexOf("€")){
 			result=tkl.substring(tkl.indexOf("€")+1, tkl.lastIndexOf("€"));
 			return result;
-		}else if(tkl.indexOf("(")>0&&tkl.indexOf("(")!=tkl.lastIndexOf("(")){
+		}else if(tkl.indexOf("(")>=0&&tkl.indexOf("(")!=tkl.lastIndexOf("(")){
 			result=tkl.substring(tkl.indexOf("(")+1, tkl.lastIndexOf("("));
 			return result;
-		}else if(tkl.indexOf("(")>0&&tkl.indexOf(")")>0){
+		}else if(tkl.indexOf("(")>=0&&tkl.indexOf(")")>=0){
 			result=tkl.substring(tkl.indexOf("(")+1, tkl.lastIndexOf(")"));
 			return result;
 		}else
