@@ -3,7 +3,7 @@
     "version": "0.0.4",
     "manifest_version": 3,
     "description": "将淘口令指向的商品在浏览器中打开",
-    "browser_action": {
+    "action": {
         "default_icon": "1.png",
         "default_title": "打开淘口令",
         "default_popup": "popup.html"

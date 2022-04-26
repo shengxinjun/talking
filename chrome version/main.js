@@ -6,7 +6,7 @@ $(function() {
 	$("#submit").click(function(e){
 		var tkl = $("#talking").val();
 		 $.ajax({
-            url: "http://121.196.54.227:7474/tkl",
+            url: "http://xjun.site:8091/tkl",
 			type : 'GET',
 			dataType : 'json',
 			data : {
